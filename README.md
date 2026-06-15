@@ -26,62 +26,6 @@ Redux — State management
 WebSocket — Real-time updates
 Axios — API communication
 
-Audio Input (Upload / Microphone)
-        │
-        ▼
-┌─────────────────────┐
-│  Audio Preprocessing │  ← Librosa (noise reduction, normalization, MFCCs)
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│  Speaker Diarization │  ← Whisper + PyAnnote (real-time speaker separation)
-└─────────────────────┘
-        │
-        ▼
-┌──────────────────────────────────────────┐
-│         Per-Speaker Processing           │
-│  ┌─────────────────┐  ┌───────────────┐  │
-│  │  Transcription  │  │   Sentiment   │  │
-│  │   (ASR Model)   │  │ Analysis(BERT)│  │
-│  └─────────────────┘  └───────────────┘  │
-└──────────────────────────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│   Text Summarization │  ← T5 Transformer (abstractive summaries)
-└─────────────────────┘
-        │
-        ▼
-┌─────────────────────┐
-│   React.js Frontend  │  ← Real-time display of transcriptions,
-│   (User Interface)   │     sentiment labels, and summaries
-└─────────────────────┘
-aural-trans/
-├── README.md
-├── requirements.txt
-├── backend/
-│   ├── app.py                  ← Flask API server
-│   ├── aural_trans.py          ← Core pipeline orchestration
-│   ├── audio_preprocessing.py  ← Librosa-based audio cleaning
-│   ├── speaker_diarization.py  ← Whisper + PyAnnote integration
-│   ├── sentiment_analysis.py   ← BERT-based sentiment classifier
-│   └── text_summarization.py   ← T5 transformer summarizer
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx             ← Main React component
-│   │   ├── components/
-│   │   │   ├── AudioUpload.jsx
-│   │   │   ├── TranscriptionView.jsx
-│   │   │   ├── SentimentPanel.jsx
-│   │   │   └── SummaryView.jsx
-│   └── public/
-└── results/
-    ├── output_transcription.png
-    ├── sentiment_analysis.png
-    ├── text_summarization.png
-    └── speech_diarization.png
-
   Installation & setup 
   Prerequisites
   Python
