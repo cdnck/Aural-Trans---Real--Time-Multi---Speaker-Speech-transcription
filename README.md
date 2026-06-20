@@ -1,5 +1,6 @@
-# Aural-Trans---Real--Time-Multi---Speaker-Speech-transcription
-Real-time multi-speaker speech transcription | Speaker Diarization | Sentiment Analysis | Text Summarization | Python | React.js
+# Aural-trans-multispeaker-ai
+
+Key Index term: Real-time multi-speaker speech transcription, Speaker Diarization, Sentiment Analysis, Text Summarization, Python, React.js
 Aural Trans is an end-to-end speech intelligence system that goes beyond conventional transcription. It identifies multiple speakers in real time, analyzes the emotional tone of each speaker, and distills entire conversations into concise summaries — all through an intuitive web interface.
 
 🛠️ Tech Stack
